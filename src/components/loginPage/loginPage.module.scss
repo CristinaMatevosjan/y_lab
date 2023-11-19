@@ -1,0 +1,125 @@
+@use 'src/variables' as v;
+
+.form {
+    background:  v.$backModal;
+    width: 570px;
+    height: 381px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 50px 60px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+}
+
+::-webkit-credentials-auto-fill-button {
+    visibility: hidden;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+}
+
+.form_container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+.title {
+    font-size: 16px;
+    line-height: 24px;
+    text-align: left;
+}
+
+.input {
+    width: 432px;
+    height: 40px;
+    border-radius: 10px;
+    padding: 0 20px;
+    background: v.$backInput;
+    border: none;
+    margin-top: 14px;
+    box-sizing: border-box;
+
+    &:last-child {
+        position: relative;
+    }
+    & ::-moz-placeholder{ 
+        color: #797979;
+        font-size: 16px;
+        line-height: normal;
+    }
+    & :-ms-input-placeholder{ 
+            color: #797979;
+            font-size: 16px;
+            line-height: normal;
+        }
+    & ::-ms-input-placeholder{ 
+            color: #797979;
+            font-size: 16px;
+            line-height: normal;
+        }
+    & ::placeholder{ 
+            color: #797979;
+            font-size: 16px;
+            line-height: normal;
+        }
+    &::-webkit-input-placeholder{ 
+        color: #797979;
+        font-size: 16px;
+        line-height: normal;
+        }    
+
+}
+input[type="text"] {
+    font-size: 16px;
+    line-height: 24px;
+   
+}
+
+.errors_form_string {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 12px;   
+}
+.red_text {
+    color: #AC1919;
+    font-size: 13px;
+    line-height: 19.5px;
+    margin: 6px 0 -26px 12px;
+}
+
+.button {
+    font-size: 18px;
+    font-weight: 600;
+    width: 100px;
+    padding: 12px 22px 11px 21px;
+    border-radius: 10px;
+    margin-top: 20px;
+    line-height: 27px;
+    box-sizing: border-box;
+    border: none;
+    background-color: v.$btn;
+    cursor: pointer;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.25);
+
+    &:hover {
+        background-color: v.$backBtnHover;
+        color: v.$btnColorHover;
+
+    }
+}
+.error_border {
+    border-radius: 10px;
+    border: 1px solid #AC1919;
+    background: #EDDFDF;
+}
+.eye {
+    position: absolute;
+    top: 204px;
+    left: 455px;
+    cursor: pointer;
+}
